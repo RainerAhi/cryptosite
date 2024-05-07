@@ -446,6 +446,8 @@ html.lenis {
   background-color: transparent;
   flex-direction: column;
   margin-left: 5%;
+  z-index: 10;
+  position: relative;
 }
 
 .seven-row {

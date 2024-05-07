@@ -9,7 +9,8 @@ export const SectionFAQ = () => {
       
       return (
         <section className="seven">
-          <div className="seven-spacing" />
+        <div className="background-element-one" />
+        <div className="background-element-two" />
           <div className="seven-content" >
             <h1 className="medium-headline white" >Facts & Answers</h1>
             <div className="seven-row" >
