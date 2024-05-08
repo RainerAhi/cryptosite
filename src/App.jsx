@@ -6,6 +6,7 @@ import { Section1 } from "./Sections/Section1";
 import { Section2 } from "./Sections/Section2";
 import { SectionFAQ } from "./Sections/SectionFAQ";
 import { SectionBUYNOW } from "./Sections/SectionBUYNOW";
+import { Section3 } from "./Sections/Section3";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -13,7 +14,7 @@ const LoadingScreen = () => {
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        <h1 className="loading-screen__title animated-text">Crypto</h1>
+        <h1 className="loading-screen__title animated-text">YTFIN</h1>
         <div className="progress__container">
           <div className="progress__bar" style={{ width: `${progress}%` }}></div>
         </div>
@@ -65,7 +66,7 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={[<Section1  />, <Section2 />]} />
+          <Route path="/" element={[<Section1  />, <Section2 />, <Section3 />]} />
           <Route path="/buy" element={<SectionBUYNOW />} />
           <Route path="/faq" element={<SectionFAQ />} />
         </Routes>

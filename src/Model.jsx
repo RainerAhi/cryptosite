@@ -41,17 +41,16 @@ export default function Model(props) {
 
 
       tl
-      // .to(model.current.rotation, {
-      //   x: Math.PI * 2,
-      //   y: Math.PI * 2,
-      //   scrollTrigger: {
-      //     trigger: ".two",
-      //     start: "top bottom",
-      //     end: "top top",
-      //     scrub: true,
-      //     immediateRender: false,
-      //   },
-      // })
+      .to(model.current.rotation, {
+        y: Math.PI * -0.3,
+        scrollTrigger: {
+          trigger: ".two",
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
 
       
 
@@ -62,9 +61,9 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('./computermodel.gltf')
   return (
     <group rotation={ [ 0, Math.PI * -0.05, 0 ] } >
-    <Html transform wrapperClass="htmlScreen" distanceFactor={ 1.17 } position={ [ 0, 0.78, -2.17 ] } rotation={ [ - 0.256, 0, 0 ] } >
+    {/* <Html transform wrapperClass="htmlScreen" distanceFactor={ 1.17 } position={ [ 0, 0.78, -2.17 ] } rotation={ [ - 0.256, 0, 0 ] } >
       <iframe src="https://rainerahi.vercel.app/" />
-    </Html>
+    </Html> */}
     <group ref={model} {...props} dispose={null}>
       <group position={[0, 0, 0]} scale={0.103}>
         <mesh
