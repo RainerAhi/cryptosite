@@ -7,6 +7,9 @@ import { Section2 } from "./Sections/Section2";
 import { SectionFAQ } from "./Sections/SectionFAQ";
 import { SectionBUYNOW } from "./Sections/SectionBUYNOW";
 import { Section3 } from "./Sections/Section3";
+import { Section4 } from "./Sections/Section4";
+import { Section5 } from "./Sections/Section5";
+import { Section6 } from "./Sections/Section6";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -66,7 +69,7 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={[<Section1  />, <Section2 />, <Section3 />]} />
+          <Route path="/" element={[<Section1  />, <Section2 />, <Section3 />, <Section4 />, <Section5 />, <Section6 />]} />
           <Route path="/buy" element={<SectionBUYNOW />} />
           <Route path="/faq" element={<SectionFAQ />} />
         </Routes>

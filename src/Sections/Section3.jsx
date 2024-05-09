@@ -66,8 +66,8 @@ export const Section3 = () => {
                             <h1 className="smallest-headline white" >Secure Investments</h1>
                         </div>
                     </div>
+                    <h1 className="small-description three-bottom-description grey" >YTFIN's unique model aligns the interests of creators, advertisers, and investors</h1>
                 </div>
-                <h1 className="small-description three-bottom-description grey" >YTFIN's unique model aligns the interests of creators, advertisers, and investors</h1>
             </div>
         </section>
     )
