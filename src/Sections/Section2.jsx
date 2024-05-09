@@ -48,7 +48,7 @@ export const Section2 = () => {
                     <h1 className="medium-headline two-top-title white" >Unlocking the Potential of Community</h1>
                     <h1 className="small-description two-top-description grey" >At YTFIN, we harness the power of community to revolutionize content monetization. By supporting YouTube creators, our community members enhance revenue generation, which boosts rewards for everyone involved. YTFIN serves as a catalyst, empowering you to drive success and share in the collective profits. Together, we create a sustainable cycle of success.</h1>
                     <button className="button-start-earning" >
-                        <h1>Start Earning with YTFIN Today</h1>
+                        <h1>Start Earning with YTFIN</h1>
                     </button>
                 </div>
                 <div className={`two-containers ${isVisibleContainers ? 'visible' : ''}`} ref={containersRef}>

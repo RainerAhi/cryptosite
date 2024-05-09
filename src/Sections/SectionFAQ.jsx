@@ -54,16 +54,16 @@ export const SectionFAQ = () => {
                 <div className="seven-socials" >
                   <h1 className="description white" >Lorem Ipsum</h1>
                   <div className="seven-socials-icons" >
+                    <i class="fa-brands fa-twitter" onClick={() => handleClick('https://twitter.com/home')} ></i>
+                    <i class="fa-brands fa-linkedin" onClick={() => handleClick('https://www.linkedin.com/feed/')} ></i>
                     <i class="fa-brands fa-instagram" onClick={() => handleClick('https://www.instagram.com/')} ></i>
-                    <i class="fa-brands fa-facebook" onClick={() => handleClick('https://www.facebook.com/')}></i>
-                    <i class="fa-brands fa-twitter" onClick={() => handleClick('https://twitter.com/home')}></i>
-                    <i class="fa-brands fa-discord" onClick={() => handleClick('https://discord.com/')}></i>
+                    <i class="fa-brands fa-discord" onClick={() => handleClick('https://discord.com/')} ></i>
                   </div>
                 </div>
                 <div className="seven-get-started" >
                   <h1 className="small-headline ready-to-get-started white" >Lorem Ipsum Dolor Sit</h1>
                   <h1 className="small-text ready-to-get-started-description white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</h1>
-                  <div className="broneeri-kõne-seven" >
+                  <div className="broneeri-kõne-seven " >
                     <h1 className="small-description white bold broneeri-kõne-text" >Lorem Ipsum</h1>
                   </div>
                 </div>

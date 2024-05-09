@@ -10,6 +10,7 @@ export default function Model2(props) {
   const { camera, scene } = useThree()
 
   const model = useRef()
+  const modelScale = useRef()
 
   const tl = gsap.timeline()
 
@@ -65,9 +66,19 @@ export default function Model2(props) {
 
       tl
       .to(model.current.rotation, {
-        y: Math.PI * -0.3,
+        y: Math.PI / 0.75,
         scrollTrigger: {
-          trigger: ".two",
+          trigger: ".six",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          immediateRender: false,
+        },
+      })
+
+      .to(model.current.rotation, {
+        scrollTrigger: {
+          trigger: ".footer",
           start: "top bottom",
           end: "top top",
           scrub: true,
@@ -83,8 +94,8 @@ export default function Model2(props) {
   }, [])
   const { nodes, materials } = useGLTF('./eth.glb')
   return (
-    <group ref={model} {...props} dispose={null}>
-      <group position={[-2.998, 0, 0.987]} rotation={[-Math.PI / 2, 0, 0]}>
+    <group ref={model} rotation={ [ Math.PI * -0.15, Math.PI * 0.2, 0 ] } {...props} dispose={null}>
+      <group ref={modelScale} position={[-2.998, 0, 0.987]} rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow

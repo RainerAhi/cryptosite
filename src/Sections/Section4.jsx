@@ -36,7 +36,7 @@ export const Section4 = () => {
                 observerTop.unobserve(topRef.current);
             }
             if (bottomRef.current) {
-                bottomContainers.unobserve(bottomRef.current);
+                observerBottom.unobserve(bottomRef.current);
             }
         };
     }, []);
@@ -56,7 +56,7 @@ export const Section4 = () => {
                         </div>
                         <div className="four-bottom-right" >
                             <div className="four-bottom-point" >
-                                <div className="three-icon" ><i class="fa-solid fa-coins"></i></div>
+                                <div className="three-icon redbackground" ><i class="fa-solid fa-coins"></i></div>
                                 <h1 className="description four-bottom-text white" >Invest & Earn</h1>
                             </div>
                             <div className="four-bottom-point" >
@@ -64,7 +64,7 @@ export const Section4 = () => {
                                 <h1 className="description four-bottom-text  white" >Grow & Hold</h1>
                             </div>
                             <div className="four-bottom-point" >
-                                <div className="three-icon" ><i class="fa-solid fa-wallet"></i></div>
+                                <div className="three-icon redbackground" ><i class="fa-solid fa-wallet"></i></div>
                                 <h1 className="description four-bottom-text  white" >Start Now & Hold</h1>
                             </div>
                         </div>

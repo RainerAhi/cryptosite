@@ -36,7 +36,7 @@ export const Section3 = () => {
                 observerTop.unobserve(topRef.current);
             }
             if (bottomRef.current) {
-                bottomContainers.unobserve(bottomRef.current);
+                observerBottom.unobserve(bottomRef.current);
             }
         };
     }, []);
@@ -57,7 +57,7 @@ export const Section3 = () => {
                         </div>
                         <div className="three-border" />
                         <div className="three-bottom-point" >
-                            <div className="three-icon" ><h1 className="small-description bold" >2</h1></div>
+                            <div className="three-icon redbackground" ><h1 className="small-description bold" >2</h1></div>
                             <h1 className="smallest-headline white" >Reliable Returns</h1>
                         </div>
                         <div className="three-border" />
