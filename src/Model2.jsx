@@ -92,7 +92,7 @@ export default function Model2(props) {
     
 
   }, [])
-  const { nodes, materials } = useGLTF('./eth.glb')
+  const { nodes, materials } = useGLTF('/eth.glb')
   return (
     <group ref={model} rotation={ [ Math.PI * -0.15, Math.PI * 0.2, 0 ] } {...props} dispose={null}>
       <group ref={modelScale} position={[-2.998, 0, 0.987]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -130,4 +130,4 @@ export default function Model2(props) {
   )
 }
 
-useGLTF.preload('./eth.glb')
+useGLTF.preload('/eth.glb')
