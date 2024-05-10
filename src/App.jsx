@@ -50,6 +50,7 @@ function App() {
   requestAnimationFrame(raf);
 
   return (
+    <Router>
       <>
         <LoadingScreen />
         <div className="experience" >
@@ -61,23 +62,23 @@ function App() {
             <img className="left-content-image" src="/ytfin.png" />
           </div>
           <div className="right-content">
-            <h1 className="small-text navigation-text white">
-            </h1>
-            <h1 className="small-text navigation-text white">
-            </h1>
-            <h1 className="small-text navigation-text white">
-            </h1>
+            <Link to="/" className="small-text navigation-text white">
+              <h1 className="small-text navigation-text white" >Home</h1>
+            </Link>
+            <Link to="/faq" className="small-text navigation-text white">
+              <h1 className="small-text navigation-text white" >FAQ</h1>
+            </Link>
           </div>
         </div>
 
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section6 />
-        <Section4 />
-        <Section5 />
+        <Routes>
+          <Route path="/" element={<Section1 />} />
+          <Route path="/faq" element={<SectionFAQ />} />
+        </Routes>
+
         <SectionFooter />
       </>
+    </Router>
   );
 }
 
