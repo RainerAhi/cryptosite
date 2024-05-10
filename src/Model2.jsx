@@ -1,58 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { Html, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
-import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
-import SplitType from 'split-type'
 
 export default function Model2(props) {
 
-  const { camera, scene } = useThree()
-
-  const model = useRef()
-  const modelScale = useRef()
+  const coin = useRef()
 
   const tl = gsap.timeline()
 
   let mm  = gsap.matchMedia();
 
-  const cameraLoads = () => {
-    gsap.to(camera.position, {
-      duration: 5,
-      x: 0,
-      y: 0,
-      z: 10,
-      ease: 'power3.out',
-    });
-  };
-
-  useEffect(() => {
-      cameraLoads();
-  }, []);
-
   useLayoutEffect(() => {
-
-    const cont = document.querySelector(".carousel");
-    const splitTypes = document.querySelectorAll('.reveal-type')
-
-    splitTypes.forEach((char,i) => {
-
-      const bg = char.dataset.bgColor
-      const fg = char.dataset.fgColor
-
-      const text = new SplitType(char, { types: 'chars'})
-
-      gsap.from(text.chars, {
-              scrollTrigger: {
-                  trigger: char,
-                  start: 'top bottom',
-                  end: 'bottom center',
-                  scrub: true,
-              },
-              opacity: 0.2,
-              stagger: 0.1,
-      })
-  })
 
     mm.add({
       isDesktop: "(min-width: 800px)",
@@ -65,7 +24,7 @@ export default function Model2(props) {
 
 
       tl
-      .to(model.current.rotation, {
+      .to(coin.current.rotation, {
         y: Math.PI / 0.75,
         scrollTrigger: {
           trigger: ".six",
@@ -76,7 +35,7 @@ export default function Model2(props) {
         },
       })
 
-      .to(model.current.rotation, {
+      .to(coin.current.rotation, {
         scrollTrigger: {
           trigger: ".footer",
           start: "top bottom",
@@ -92,10 +51,10 @@ export default function Model2(props) {
     
 
   }, [])
-  const { nodes, materials } = useGLTF('/eth.glb')
+  const { nodes, materials } = useGLTF('./eth.glb')
   return (
-    <group ref={model} rotation={ [ Math.PI * -0.15, Math.PI * 0.2, 0 ] } {...props} dispose={null}>
-      <group ref={modelScale} position={[-2.998, 0, 0.987]} rotation={[-Math.PI / 2, 0, 0]}>
+    <group ref={coin} rotation={ [ Math.PI * -0.15, Math.PI * 0.2, 0 ] } {...props} dispose={null}>
+      <group position={[-2.998, 0, 0.987]} rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
             castShadow
@@ -130,4 +89,4 @@ export default function Model2(props) {
   )
 }
 
-useGLTF.preload('/eth.glb')
+useGLTF.preload('./eth.glb')

@@ -54,10 +54,10 @@ export const SectionFAQ = () => {
                 <div className="seven-socials" >
                   <h1 className="description white" >Lorem Ipsum</h1>
                   <div className="seven-socials-icons" >
-                    <i class="fa-brands fa-twitter" onClick={() => handleClick('https://twitter.com/home')} ></i>
-                    <i class="fa-brands fa-linkedin" onClick={() => handleClick('https://www.linkedin.com/feed/')} ></i>
-                    <i class="fa-brands fa-instagram" onClick={() => handleClick('https://www.instagram.com/')} ></i>
-                    <i class="fa-brands fa-discord" onClick={() => handleClick('https://discord.com/')} ></i>
+                    <i className="fa-brands fa-twitter" onClick={() => handleClick('https://twitter.com/home')} ></i>
+                    <i className="fa-brands fa-linkedin" onClick={() => handleClick('https://www.linkedin.com/feed/')} ></i>
+                    <i className="fa-brands fa-instagram" onClick={() => handleClick('https://www.instagram.com/')} ></i>
+                    <i className="fa-brands fa-discord" onClick={() => handleClick('https://discord.com/')} ></i>
                   </div>
                 </div>
                 <div className="seven-get-started" >

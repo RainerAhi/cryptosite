@@ -55,7 +55,7 @@ export const Section2 = () => {
                     <h1 className="medium-headline white" >Steps for Community Success</h1>
                     <div className="two-container-row" >
                         <div className="two-row-one" >
-                            <i class="fa-regular fa-credit-card"></i>
+                            <i className="fa-regular fa-credit-card"></i>
                             <div className="row-text-content" >
                                 <h1 className="smallest-headline white" >Buying Tokens</h1>
                                 <h1 className="small-description grey" >Acquire YTFIN tokens, which will be used to invest a percentage into channels and content creators, amplifying their impact and fostering a thriving digital content community.</h1>
@@ -66,18 +66,18 @@ export const Section2 = () => {
                                 <h1 className="smallest-headline white" >Maximizing Engagement</h1>
                                 <h1 className="small-description grey" >Delve into videos and ignite the buzz. Your engagement through likes, shares, and views isn't merely about grabbing attention; it fuels the revenue stream. Increased visibility translates to higher advertising earnings. Easy, isn't it?</h1>
                             </div>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                     <div className="two-container-one" >
-                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <i className="fa-solid fa-arrow-trend-up"></i>
                         <div className="row-text-content" >
                             <h1 className="smallest-headline white" >Sustainable Ecosystem</h1>
                             <h1 className="small-description grey" >All advertising revenue is consolidated and distributed monthly in the form of YTFIN tokens. A fraction of this income is then reinvested into both new and established YouTube content, fostering a self-perpetuating loop of investment and yield.</h1>
                         </div>
                     </div>
                     <div className="two-container-two" >
-                        <i class="fa-solid fa-globe"></i>
+                        <i className="fa-solid fa-globe"></i>
                         <div className="row-text-content" >
                             <h1 className="smallest-headline white" >Empowering Growth</h1>
                             <h1 className="small-description grey" >Each month, we consolidate all the advertising revenue generated and distribute it as YTFIN tokens among our dedicated contributors. But that’s not where the journey ends. We reinvest a portion of these funds to craft even more captivating YouTube content. It's a perpetual cycle of excellence, amplifying our impact with each turn—more videos, broader viewership, and increased prosperity for all involved!</h1>

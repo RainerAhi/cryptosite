@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Html, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
 import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
@@ -7,9 +7,9 @@ import SplitType from 'split-type'
 
 export default function Model(props) {
 
-  const { camera, scene } = useThree()
+  const { camera } = useThree()
 
-  const model = useRef()
+  const laptop = useRef()
 
   const tl = gsap.timeline()
 
@@ -64,7 +64,7 @@ export default function Model(props) {
 
 
       tl
-      .to(model.current.rotation, {
+      .to(laptop.current.rotation, {
         y: Math.PI * -0.3,
         scrollTrigger: {
           trigger: ".two",
@@ -81,13 +81,10 @@ export default function Model(props) {
     
 
   }, [])
-  const { nodes, materials } = useGLTF('/computermodel.gltf')
+  const { nodes, materials } = useGLTF('./computermodel.gltf')
   return (
     <group rotation={ [ 0, Math.PI * -0.05, 0 ] } >
-    {/* <Html transform wrapperClass="htmlScreen" distanceFactor={ 1.17 } position={ [ 0, 0.78, -2.17 ] } rotation={ [ - 0.256, 0, 0 ] } >
-      <iframe src="https://rainerahi.vercel.app/" />
-    </Html> */}
-    <group ref={model} {...props} dispose={null}>
+    <group ref={laptop} {...props} dispose={null}>
       <group position={[0, 0, 0]} scale={0.103}>
         <mesh
           castShadow
@@ -278,4 +275,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/computermodel.gltf')
+useGLTF.preload('./computermodel.gltf')

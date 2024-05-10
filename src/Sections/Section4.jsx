@@ -56,15 +56,15 @@ export const Section4 = () => {
                         </div>
                         <div className="four-bottom-right" >
                             <div className="four-bottom-point" >
-                                <div className="three-icon redbackground" ><i class="fa-solid fa-coins"></i></div>
+                                <div className="three-icon redbackground" ><i className="fa-solid fa-coins"></i></div>
                                 <h1 className="description four-bottom-text white" >Invest & Earn</h1>
                             </div>
                             <div className="four-bottom-point" >
-                                <div className="three-icon" ><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                                <div className="three-icon" ><i className="fa-solid fa-hand-holding-dollar"></i></div>
                                 <h1 className="description four-bottom-text  white" >Grow & Hold</h1>
                             </div>
                             <div className="four-bottom-point" >
-                                <div className="three-icon redbackground" ><i class="fa-solid fa-wallet"></i></div>
+                                <div className="three-icon redbackground" ><i className="fa-solid fa-wallet"></i></div>
                                 <h1 className="description four-bottom-text  white" >Start Now & Hold</h1>
                             </div>
                         </div>
