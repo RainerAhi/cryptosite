@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
+import { useProgress } from "@react-three/drei";
 import { Section1 } from "./Sections/Section1";
 import { Section2 } from "./Sections/Section2";
 import { SectionFAQ } from "./Sections/SectionFAQ";
@@ -10,6 +11,23 @@ import { Section4 } from "./Sections/Section4";
 import { Section5 } from "./Sections/Section5";
 import { Section6 } from "./Sections/Section6";
 import { SectionFooter } from "./Sections/SectionFooter";
+import CanvasContainer from "./CanvasContainer";
+import CanvasContainer2 from "./CanvasContainer2";
+
+const LoadingScreen = () => {
+  const { progress, active } = useProgress();
+
+  return (
+    <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
+      <div className="loading-screen__container">
+        <h1 className="loading-screen__title animated-text">YTFIN</h1>
+        <div className="progress__container">
+          <div className="progress__bar" style={{ width: `${progress}%` }}></div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 function App() {
   const lenis = new Lenis({
@@ -32,8 +50,11 @@ function App() {
   requestAnimationFrame(raf);
 
   return (
-    <Router>
       <>
+        <LoadingScreen />
+        <div className="experience" >
+          <CanvasContainer2 />
+        </div>
 
         <div className="nav">
           <div className="left-content">
@@ -41,24 +62,22 @@ function App() {
           </div>
           <div className="right-content">
             <h1 className="small-text navigation-text white">
-              <Link className="small-text white" to="/">Home</Link>
             </h1>
             <h1 className="small-text navigation-text white">
-              <Link to="/buy">Buy</Link>
             </h1>
             <h1 className="small-text navigation-text white">
-              <Link to="/faq">FAQ</Link>
             </h1>
           </div>
         </div>
 
-        <Routes>
-          <Route path="/" element={[<Section1  />, <Section2 />, <Section3 />, <Section4 />, <Section5 />, <Section6 />, <SectionFooter />]} />
-          <Route path="/buy" element={<SectionBUYNOW />} />
-          <Route path="/faq" element={<SectionFAQ />} />
-        </Routes>
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section6 />
+        <Section4 />
+        <Section5 />
+        <SectionFooter />
       </>
-    </Router>
   );
 }
 

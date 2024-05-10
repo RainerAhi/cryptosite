@@ -35,16 +35,6 @@ export default function Model2(props) {
         },
       })
 
-      .to(coin.current.rotation, {
-        scrollTrigger: {
-          trigger: ".footer",
-          start: "top bottom",
-          end: "top top",
-          scrub: true,
-          immediateRender: false,
-        },
-      })
-
       
 
     })

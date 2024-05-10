@@ -8,11 +8,9 @@ export default function Experience2() {
   return (
     <>
       <SoftShadows intensity={ 20 } />
-      <Suspense fallback >
         <Float rotationIntensity={ 0.75 } floatIntensity={ 1 } speed={ 2 } >
           <Model2 position={ [ 0, 0, 0 ] } scale={ 1 } />
         </Float>  
-      </Suspense>
       <OrbitControls minPolarAngle={Math.PI / -2} maxPolarAngle={Math.PI / 1} enableZoom={ false } enableRotate={ false } enablePan={ false } />
       <Environment preset='city' />
       </>

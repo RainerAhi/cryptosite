@@ -1,4 +1,3 @@
-import Experience from "./Experience";
 import { Canvas, useFrame } from '@react-three/fiber'
 import Experience2 from "./Experience2";
 
