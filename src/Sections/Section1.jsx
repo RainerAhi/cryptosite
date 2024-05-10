@@ -26,6 +26,7 @@ export const Section1 = () => {
             </div>
             <div className="one-content-right" >
               <CanvasContainer />
+              <div className="mobile-scroll" />
             </div>
           </div>
           <div class="logos">
