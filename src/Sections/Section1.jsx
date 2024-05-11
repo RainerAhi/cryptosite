@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CanvasContainer from "../CanvasContainer";
-import CanvasContainer2 from "../CanvasContainer2";
+import { Section6 } from "./Section6";
 
 export const Section1 = () => {
 
@@ -203,13 +203,6 @@ export const Section1 = () => {
             </div>
         </section>
 
-        <section className="six" >
-            <div className="six-content" >
-                <CanvasContainer2 />
-                <div className="mobile-scroll" />
-            </div>
-        </section>
-
         <section className="three" >
             <div className="three-content" >
                 <div className={`three-top-text-content ${isVisibleThree ? 'visible' : ''}`} ref={threeRef}>
@@ -275,6 +268,8 @@ export const Section1 = () => {
                 <h1 className="reveal-type medium-headline five-text grey" >Experience the forefront of Fintech<br/> innovation with YTFIN. Our<br/> pioneering token model ingeniously<br/> funnels YouTube's ad revenue<br/> into our ecosystem, ensuring a<br/> consistent and sustainable<br/> stream of passive income for our <br/>esteemed investors.</h1>
             </div>
         </section>
+
+        <Section6 />
       </>
     )
 }

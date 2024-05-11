@@ -3,16 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 import { useProgress } from "@react-three/drei";
 import { Section1 } from "./Sections/Section1";
-import { Section2 } from "./Sections/Section2";
 import { SectionFAQ } from "./Sections/SectionFAQ";
-import { SectionBUYNOW } from "./Sections/SectionBUYNOW";
-import { Section3 } from "./Sections/Section3";
-import { Section4 } from "./Sections/Section4";
-import { Section5 } from "./Sections/Section5";
-import { Section6 } from "./Sections/Section6";
 import { SectionFooter } from "./Sections/SectionFooter";
-import CanvasContainer from "./CanvasContainer";
-import CanvasContainer2 from "./CanvasContainer2";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -53,9 +45,6 @@ function App() {
     <Router>
       <>
         <LoadingScreen />
-        <div className="experience" >
-          <CanvasContainer2 />
-        </div>
 
         <div className="nav">
           <div className="left-content">

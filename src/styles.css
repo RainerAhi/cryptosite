@@ -813,18 +813,38 @@ html.lenis {
   background-color: #070E2B;
   display: flex;
   position: relative;
-  height: 100vh;
+  height: fit-content;
 }
 
-.six-content {
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #070E2B;
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  margin-bottom: 15vh;
 }
+
+.view {
+  overflow: hidden;
+  background-color: #070E2B;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+
+.canvas {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
 
 /* SECTION FOOTER */
 
@@ -1933,6 +1953,203 @@ html.lenis {
 
 .footer-text:hover {
   color: #fefeff50;
+}
+
+/* SECTION FAQ */
+
+.faq {
+  background-color: #070E2B;
+  height: fit-content;
+  display: flex;
+}
+
+.seven {
+  z-index: 20;
+  background-color: #070E2B;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.seven-content {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin-top: 0%;
+  background-color: transparent;
+  flex-direction: column;
+  margin-left: 5%;
+  z-index: 10;
+  position: relative;
+}
+
+.seven-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seven-row-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion {
+  background-color: #fefeff15;
+  margin-bottom: 2vh;
+  cursor: pointer;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 0vw;
+  padding-bottom: 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.6s ease;
+  border-radius: 35px;
+}
+
+.accordion-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.accordion-icon {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fefeff;
+}
+
+.accordion:hover {
+  background-color: #fefeff25;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-text-accordion {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 2vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.seven-row-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seven-socials {
+  margin-top: 3vh;
+  width: 100%;
+  height: auto;
+  background-color: #fefeff15;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+  border-radius: 35px;
+}
+
+.seven-socials-icons {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 2vw;
+}
+
+.fa-brands {
+  color: #fefeff;
+  font-size: 5vw;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.fa-brands:hover {
+  color: #fefeff75;
+}
+
+.seven-get-started {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 35px;
+  background-color: #fefeff15;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.ready-to-get-started {
+  width: 75%;
+  text-align: center;
+  line-height: 125%;
+}
+
+.ready-to-get-started-description {
+  text-align: center;
+  width: 75%;
+}
+
+.broneeri-kõne-seven {
+  width: 75%;
+  height: auto;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25vw;
+  background-color: #1931FE;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.broneeri-kõne-seven:hover {
+  background-color: #1931FE90;
 }
 
 }
